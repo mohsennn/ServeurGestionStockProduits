@@ -17,7 +17,7 @@ import com.example.demo.entity.Produit;
 import com.example.demo.service.IProduitService;
 
 
-@CrossOrigin
+//@CrossOrigin
 @RestController
 @RequestMapping("/api/produit")
 public class ProduitController {
