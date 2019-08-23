@@ -1,10 +1,16 @@
 package com.example.demo;
 
+import java.util.Arrays;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import com.example.demo.entity.Produit;
+import com.example.demo.entity.Role;
+import com.example.demo.entity.User;
+import com.example.demo.repository.RoleRepository;
+import com.example.demo.repository.UserRepository;
 
 @SpringBootApplication
 
@@ -12,13 +18,28 @@ public class ServeurGestionStockProduitsApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext ctx = SpringApplication.run(ServeurGestionStockProduitsApplication.class, args);
-
-//		ProduitRepository produitRepository = ctx.getBean(ProduitRepository.class);
+		/**
+		 * creation des roles
+		 */
+//		RoleRepository roleRepository = ctx.getBean(RoleRepository.class);
+//		Role roleUser = new Role("ROLE_USER");
+//		Role roleAdmin = new Role("ROLE_ADMIN");
+//		roleRepository.save(roleUser);
+//		roleRepository.save(roleAdmin);
+//		/**
+//		 * creation des users
+//		 */
 //
-//		produitRepository.save(new Produit("livre", 10, 200));
-//		produitRepository.save(new Produit("livre", 10, 200));
-//		produitRepository.save(new Produit("Stylo", 50, 60));
-
+//		UserRepository userRepository = ctx.getBean(UserRepository.class);
+//
+//		User user = new User("user", "password1", true);
+//		user.setRoles(Arrays.asList(roleUser));
+//		userRepository.save(user);
+//
+//		User admin = new User("admin", "password2", true);
+//		admin.setRoles(Arrays.asList(roleUser, roleAdmin));
+//
+//		userRepository.save(admin);
 	}
 
 }
